@@ -14,14 +14,14 @@ namespace Recursive.Tests
         [TestMethod()]
         public void FactTest()
         {
-            var result = Factorial.Fact(10);
+            var result = Factorial.Fact(9, 10);
             Assert.AreEqual(result, 3628800);
 
         }
         [TestMethod()]
         public void NotFactTest()
         {
-            var result = Factorial.NotFact(10);
+            var result = Factorial.NotFact(9, 10);
             Assert.AreEqual(result, 3628800);
         }
     }

@@ -16,8 +16,9 @@ namespace Recursive.Tests
         public void NotFibTest()
         {
             var max = 30;
-            var nums = new int[max];
-            var result = Fibonacci.NotFib(nums, max);
+            var nums = new decimal[max];
+            Array.Copy(Fibonacci.Source, nums, Fibonacci.Source.Length);
+            var result = Fibonacci.NotFib(nums, max, Fibonacci.Source.Length);
             for (int ii = 0; ii < result.Length; ii++)
             {
                 Assert.AreEqual(result[ii], fibNumbers[ii]);
@@ -28,8 +29,9 @@ namespace Recursive.Tests
         public void FibTest()
         {
             var max = 30;
-            var nums = new int[max];
-            var result = Fibonacci.Fib(nums, max);
+            var nums = new decimal[max];
+            Array.Copy(Fibonacci.Source, nums, Fibonacci.Source.Length);
+            var result = Fibonacci.Fib(nums, max, Fibonacci.Source.Length);
             for (int ii = 0; ii < result.Length; ii++)
             {
                 Assert.AreEqual(result[ii], fibNumbers[ii]);

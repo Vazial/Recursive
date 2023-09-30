@@ -23,23 +23,28 @@ namespace Recursive
             Console.WriteLine("Euclid    : Recursive  " + sw.Elapsed);
 
             sw.Restart();
-            Factorial.NotFact(100);
+            Factorial.NotFact(19, 20);
             sw.Stop();
             Console.WriteLine("Factorial : Loop       " + sw.Elapsed);
 
             sw.Restart();
-            Factorial.Fact(100);
+            Factorial.Fact(19,20);
             sw.Stop();
             Console.WriteLine("Factorial : Recursive  " + sw.Elapsed);
 
+            var max = 100;
+            var nums = new decimal[max];
+            Array.Copy(Fibonacci.Source, nums, Fibonacci.Source.Length);
             sw.Restart();
-
-            Fibonacci.NotFib(new int[30], 30);
+            var bb = Fibonacci.NotFib(nums, max, Fibonacci.Source.Length);
             sw.Stop();
             Console.WriteLine("Fibonacci : Loop       " + sw.Elapsed);
 
+            max = 100;
+            nums = new decimal[max];
+            Array.Copy(Fibonacci.Source, nums, Fibonacci.Source.Length);
             sw.Restart();
-            Fibonacci.Fib(new int[30], 30);
+            var aa  = Fibonacci.Fib(nums, max, Fibonacci.Source.Length);
             sw.Stop();
             Console.WriteLine("Fibonacci : Recursive  " + sw.Elapsed);
 

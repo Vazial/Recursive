@@ -8,20 +8,19 @@ namespace Recursive
 {
     public class Factorial
     {
-        public static int Fact(int nn)
+        public static decimal NotFact(int nn, decimal sum)
         {
-            if (nn <= 0) { return 1; }
-            return nn * Fact(nn - 1);
-        }
-
-        public static int NotFact(int nn)
-        {
-            var sum = nn;
-            for (int ii = (nn - 1); ii > 0; --ii)
+            for (int ii = nn; ii > 0; --ii)
             {
                 sum *= ii;
             }
             return sum;
+        }
+
+        public static decimal Fact(int nn, decimal sum)
+        {
+            if (nn <= 0) { return sum; }
+            return Fact(nn - 1, sum * nn);
         }
     }
 }

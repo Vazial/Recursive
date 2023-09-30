@@ -8,14 +8,11 @@ namespace Recursive
 {
     public class Fibonacci
     {
-        public static readonly int[] Source = { 0, 1 };
+        public static readonly decimal[] Source = { 0, 1 };
 
-        public static int[] NotFib(int[] nums, int max)
+        public static decimal[] NotFib(decimal[] nums, int max, int idx)
         {
             //if (max >= 0) { throw new ArgumentException("Argument must be positive."); };
-            Array.Copy(Source, nums, Source.Length);
-            int idx = Source.Length;
-
             while (idx < max)
             {
                 nums[idx] = nums[idx - 2] + nums[idx - 1];
@@ -23,14 +20,10 @@ namespace Recursive
             }
             return nums;
         }
-        public static int[] Fib(int[] nums, int max)
+
+        public static decimal[] Fib(decimal[] nums, int max, int idx)
         {
             //if (max >= 0) { throw new ArgumentException("Argument must be positive."); };
-            Array.Copy(Source, nums, Source.Length);
-            return Fib(nums, max, Source.Length);
-        }
-        private  static int[] Fib(int[] nums, int max, int idx)
-        {
             if (idx >= max) { return nums; }
             nums[idx] = nums[idx - 2] + nums[idx - 1];
             return Fib(nums, max, ++idx);
