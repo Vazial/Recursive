@@ -48,6 +48,15 @@ namespace Recursive
             sw.Stop();
             Console.WriteLine("Fibonacci : Recursive  " + sw.Elapsed);
 
+            sw.Restart();
+            Integral.NotInte(0, 1, 0.0001);
+            sw.Stop();
+            Console.WriteLine("Integral  : Loop       " + sw.Elapsed);
+
+            sw.Restart();
+            Integral.NotInte(0, 1, 0.0001);
+            sw.Stop();
+            Console.WriteLine("Integral  : Recursive  " + sw.Elapsed);
 
         }
     }
