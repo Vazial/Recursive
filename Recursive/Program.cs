@@ -33,7 +33,7 @@ namespace Recursive
             Console.WriteLine("Factorial : Recursive  " + sw.Elapsed);
 
             var max = 100;
-            var nums = new decimal[max];
+            var nums = new int[max];
             Array.Copy(Fibonacci.Source, nums, Fibonacci.Source.Length);
             sw.Restart();
             var bb = Fibonacci.NotFib(nums, max, Fibonacci.Source.Length);
@@ -41,7 +41,7 @@ namespace Recursive
             Console.WriteLine("Fibonacci : Loop       " + sw.Elapsed);
 
             max = 100;
-            nums = new decimal[max];
+            nums = new int[max];
             Array.Copy(Fibonacci.Source, nums, Fibonacci.Source.Length);
             sw.Restart();
             var aa  = Fibonacci.Fib(nums, max, Fibonacci.Source.Length);

@@ -8,9 +8,9 @@ namespace Recursive
 {
     public class Fibonacci
     {
-        public static readonly decimal[] Source = { 0, 1 };
+        public static readonly int[] Source = { 0, 1 };
 
-        public static decimal[] NotFib(decimal[] nums, int max, int idx)
+        public static int[] NotFib(int[] nums, int max, int idx)
         {
             //if (max >= 0) { throw new ArgumentException("Argument must be positive."); };
             while (idx < max)
@@ -21,7 +21,7 @@ namespace Recursive
             return nums;
         }
 
-        public static decimal[] Fib(decimal[] nums, int max, int idx)
+        public static int[] Fib(int[] nums, int max, int idx)
         {
             //if (max >= 0) { throw new ArgumentException("Argument must be positive."); };
             if (idx >= max) { return nums; }

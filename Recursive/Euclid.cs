@@ -8,7 +8,7 @@ namespace Recursive
 {
     public class Euclid
     {
-        public static decimal NotEuc(decimal xx, decimal yy)
+        public static int NotEuc(int xx, int yy)
         {
             //if (xx < yy) { throw new ArgumentException("Should swap arg1 and arg2."); }
             while (true)
@@ -19,7 +19,7 @@ namespace Recursive
                 yy = tmp % yy;
             }
         }
-        public static decimal Euc(decimal xx, decimal yy)
+        public static int Euc(int xx, int yy)
         {
             //if (xx < yy) { throw new ArgumentException("Should swap arg1 and arg2."); }
             if (xx % yy == 0) { return yy; };
