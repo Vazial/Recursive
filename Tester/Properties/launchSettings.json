@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Tester": {
+      "commandName": "Project",
+      "commandLineArgs": "Recursive.Euclid1\r\nRecursive.Euclid2"
+    }
+  }
+}

@@ -12,17 +12,17 @@ namespace Recursive.Tests
     public class EuclidTests
     {
         [TestMethod()]
-        public void EucTest()
+        public void LoopTest()
         {
-            var result = Euclid.Euc(12345678, 432);
-            Assert.AreEqual(result, 18);
-        }
-        [TestMethod()]
-        public void NotEucTest()
-        {
-            var result = Euclid.NotEuc(12345678, 432);
+            var result = new Euclid1().Calc(12345678, 432);
             Assert.AreEqual(result, 18);
         }
 
+        [TestMethod()]
+        public void RecTest()
+        {
+            var result = new Euclid2().Calc(12345678, 432);
+            Assert.AreEqual(result, 18);
+        }
     }
 }

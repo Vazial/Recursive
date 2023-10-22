@@ -1,5 +1,4 @@
-﻿using Recursive.Tester;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,26 +6,35 @@ using System.Threading.Tasks;
 
 namespace Recursive
 {
-    public class Factorial : ITestable
+    public class Factorial1 : ITestable
     {
-        public static int NotFact(int nn, int sum)
+        
+        public int Calc(int nn, int sum = 1)
         {
+            //if (nn < 0) { throw new ArgumentException("Argument must be positive."); }
             for (int ii = nn; ii > 0; --ii)
             {
                 sum *= ii;
             }
             return sum;
         }
-
-        public static int Fact(int nn, int sum)
+        public double[] TestMethod()
         {
+            return new double[] { Calc(10) };
+        }
+    }
+    public class Factorial2 : ITestable
+    {
+        public int Calc(int nn, int sum = 1)
+        {
+            //if (nn < 0) { throw new ArgumentException("Argument must be positive."); }
             if (nn <= 0) { return sum; }
-            return Fact(nn - 1, sum * nn);
+            return Calc(nn - 1, sum * nn);
         }
 
         public double[] TestMethod()
         {
-            return new double[] { Fact(10, 0) };
+            return new double[] { Calc(10) };
         }
     }
 }
