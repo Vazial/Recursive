@@ -12,16 +12,16 @@ namespace Recursive.Tests
     public class IntegralTests
     {
         [TestMethod()]
-        public void NotInteTest()
+        public void LoopTest()
         {
-            var result = Integral.NotInte(0, 1, 0.0001);
+            var result = new Integral1().Calc(0, 1, 0.0001);
             Assert.AreEqual(Math.Round(result, 3), 0.333);
         }
 
         [TestMethod()]
-        public void InteTest()
+        public void RecTest()
         {
-            var result = Integral.Inte(0, 1, 0.0001);
+            var result = new Integral2().Calc(0, 1, 0.0001);
             Assert.AreEqual(Math.Round(result, 3), 0.333);
         }
     }

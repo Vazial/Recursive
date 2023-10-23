@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maze
+namespace Recursive.Maze
 {
     public class Seeker
     {
@@ -12,7 +12,6 @@ namespace Maze
 
         public static Cell Seek(CellInfo[,] maze, int PosX = 1, int PosY = 1)
         {
-//            MazeGenerator.DebugPrint(maze);
             for (int ii = 0; ii < Directions.GetLength(0); ++ii)
             {
                 var X = PosX + Directions[ii, 0];

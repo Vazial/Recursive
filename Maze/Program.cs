@@ -1,4 +1,4 @@
-﻿namespace Maze
+﻿namespace Recursive.Maze
 {
     public class Program
     {
